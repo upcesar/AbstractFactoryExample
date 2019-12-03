@@ -16,13 +16,12 @@ namespace AbstractFactoryExample.ConsoleApp.Factories
 
         #region Public Methods
         public static IServiceCollection GetInstance()
-            => instance = instance ?? new ServiceCollection().SetupFactories();
+            => instance ??= new ServiceCollection()
+                                .SetupFactories();
         private static IServiceCollection SetupFactories(this IServiceCollection services)
             => services.AddSingleton<AnimalFactory>()
                        .AddSingleton<FoodFactory>();
 
         #endregion
-
-        
     }
 }
