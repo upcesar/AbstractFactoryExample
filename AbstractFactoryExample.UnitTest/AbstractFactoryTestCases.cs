@@ -10,6 +10,7 @@ namespace AbstractFactoryExample.UnitTest
     {
         private readonly AnimalFactory animalFactory;
         private readonly FoodFactory foodFactory;
+        
         public AbstractFactoryTestCases()
         {
             animalFactory = new AnimalFactory();
@@ -19,6 +20,7 @@ namespace AbstractFactoryExample.UnitTest
         [Fact]
         public void SheepInstanceTest()
             => Assert.IsType<Sheep>(animalFactory.CreateInstance(AnimalEnum.SHEEP));
+        
         [Fact]
         public void NotWolfInstanceTest()
             => Assert.IsNotType<Wolf>(animalFactory.CreateInstance(AnimalEnum.SHEEP));
