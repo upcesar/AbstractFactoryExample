@@ -1,5 +1,4 @@
 ﻿using AbstractFactoryExample.ConsoleApp.Animals;
-using AbstractFactoryExample.ConsoleApp.Classes.Animals;
 using System.Collections.Generic;
 
 namespace AbstractFactoryExample.ConsoleApp.Factories

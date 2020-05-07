@@ -1,5 +1,4 @@
 ﻿using AbstractFactoryExample.ConsoleApp.Animals;
-using AbstractFactoryExample.ConsoleApp.Classes.Animals;
 using AbstractFactoryExample.ConsoleApp.Factories;
 using AbstractFactoryExample.ConsoleApp.Foods;
 using Microsoft.Extensions.DependencyInjection;

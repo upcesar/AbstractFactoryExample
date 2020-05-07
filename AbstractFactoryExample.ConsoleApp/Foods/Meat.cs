@@ -1,5 +1,4 @@
 ﻿using AbstractFactoryExample.ConsoleApp.Animals;
-using AbstractFactoryExample.ConsoleApp.Classes.Animals;
 
 namespace AbstractFactoryExample.ConsoleApp.Foods
 {

@@ -1,6 +1,4 @@
-﻿using AbstractFactoryExample.ConsoleApp.Animals;
-
-namespace AbstractFactoryExample.ConsoleApp.Classes.Animals
+﻿namespace AbstractFactoryExample.ConsoleApp.Animals
 {
     public class Wolf : Animal
     {
@@ -11,8 +9,8 @@ namespace AbstractFactoryExample.ConsoleApp.Classes.Animals
                 traceable.Trace($"I am interacting with another {another.Name} as part of a pack");
                 return;
             }
-            
-            traceable.Trace($"I am hunting a {another.Name}");            
+
+            traceable.Trace($"I am hunting a {another.Name}");
         }
 
         public override void Sleep(int hour)
