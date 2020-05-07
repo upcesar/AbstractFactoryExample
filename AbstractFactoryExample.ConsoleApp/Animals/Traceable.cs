@@ -4,14 +4,14 @@ using System.Text;
 
 namespace AbstractFactoryExample.ConsoleApp.Animals
 {
-    public abstract class Traceable
+    public class Traceable : ITraceable
     {
         private readonly List<string> _log = new List<string>();
 
-        public Traceable() => Trace($"{GetType().Name} Initialized");
+        public Traceable(string className) => Trace($"{className} Initialized");
 
-        protected void Trace(string message) => _log.Add($"{message} at {DateTime.Now}");
+        public void Trace(string message) => _log.Add($"{message} at {DateTime.Now}");
 
-        public string ShowHistory() => string.Join(Environment.NewLine, _log);
+        public override string ToString() => string.Join(Environment.NewLine, _log);
     }
 }

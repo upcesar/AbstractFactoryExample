@@ -11,5 +11,6 @@ namespace AbstractFactoryExample.ConsoleApp.Animals
         void Eat(IFood food);
         void Sleep(int hour);
         void InteractWith(IAnimals other);
+        string ShowHistory();
     }
 }
