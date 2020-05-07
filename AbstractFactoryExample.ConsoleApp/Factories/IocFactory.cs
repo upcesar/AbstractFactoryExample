@@ -1,8 +1,4 @@
-﻿using AbstractFactoryExample.ConsoleApp.Classes.Animals;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace AbstractFactoryExample.ConsoleApp.Factories
 {
@@ -19,8 +15,8 @@ namespace AbstractFactoryExample.ConsoleApp.Factories
             => instance ??= new ServiceCollection()
                                 .SetupFactories();
         private static IServiceCollection SetupFactories(this IServiceCollection services)
-            => services.AddSingleton<AnimalFactory>()
-                       .AddSingleton<FoodFactory>();
+            => services.AddSingleton<IAnimalFactory, AnimalFactory>()
+                       .AddSingleton<IFoodFactory, FoodFactory>();
 
         #endregion
     }

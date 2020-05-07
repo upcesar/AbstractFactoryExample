@@ -14,8 +14,8 @@ namespace AbstractFactoryExample.ConsoleApp
             var provider = IocFactory.GetInstance()
                                      .BuildServiceProvider();
 
-            var animalFactory = provider.GetService<AnimalFactory>();
-            var foodFactory = provider.GetService<FoodFactory>();
+            var animalFactory = provider.GetService<IAnimalFactory>();
+            var foodFactory = provider.GetService<IFoodFactory>();
             
             Console.WriteLine("Showing animal behaviors!");
             Console.WriteLine(new string('*', 15));

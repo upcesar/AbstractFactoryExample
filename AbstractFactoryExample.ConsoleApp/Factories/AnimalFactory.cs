@@ -1,12 +1,12 @@
 ﻿using AbstractFactoryExample.ConsoleApp.Animals;
 using AbstractFactoryExample.ConsoleApp.Classes.Animals;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AbstractFactoryExample.ConsoleApp.Factories
 {
-    public class AnimalFactory : Factory<AnimalEnum, IAnimals>
+    public interface IAnimalFactory : IFactory<AnimalEnum, IAnimals> { }
+    
+    public class AnimalFactory : Factory<AnimalEnum, IAnimals>, IAnimalFactory
     {
         protected override Dictionary<AnimalEnum, IAnimals> CreateInstancesDictionary()
             => new Dictionary<AnimalEnum, IAnimals>

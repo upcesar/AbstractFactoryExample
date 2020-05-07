@@ -1,15 +1,14 @@
 using AbstractFactoryExample.ConsoleApp.Animals;
 using AbstractFactoryExample.ConsoleApp.Classes.Animals;
 using AbstractFactoryExample.ConsoleApp.Factories;
-using System;
 using Xunit;
 
 namespace AbstractFactoryExample.UnitTest
 {
     public class AbstractFactoryTestCases
     {
-        private readonly AnimalFactory animalFactory;
-        private readonly FoodFactory foodFactory;
+        private readonly IAnimalFactory animalFactory;
+        private readonly IFoodFactory foodFactory;
         
         public AbstractFactoryTestCases()
         {
